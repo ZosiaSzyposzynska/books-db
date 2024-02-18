@@ -13,9 +13,10 @@ import { ConfigModule } from '@nestjs/config';
 import configuration from './config/configuration';
 import { BooksModule } from './books/books.module';
 import { AuthModule } from './auth/auth.module';
+import { UserModule } from './user/user.module';
 
 @Module({
-  imports: [AuthorsModule, PrismaModule, BooksModule, AuthModule,
+  imports: [AuthorsModule, UserModule, PrismaModule, BooksModule, AuthModule,
   ConfigModule.forRoot({
   load: [configuration],
   isGlobal: true
